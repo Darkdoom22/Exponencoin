@@ -14,13 +14,7 @@ Ubuntu (tested on Ubuntu 14.04) / Mac dependencies install script:
 https://github.com/forknote/cryptonote-generator/blob/master/configure.sh
 
 
-### Usage
-1. Download or compile the binaries
-2. Create configuration file. The easiest way is to use the form on http://forknote.net
-3. Start the daemon:
-```
-./forknoted --config-file PATH_TO_YOUR_CONFIG
-```
+
 
 Config File for Exponencoin
 Create a Configs folder where your binaries are, and place this in a file named Expo.conf
@@ -56,3 +50,17 @@ GENESIS_COINBASE_TX_HEX=010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1
 MAX_BLOCK_SIZE_INITIAL=100000
 UPGRADE_HEIGHT_V2=1
 UPGRADE_HEIGHT_V3=30
+
+
+AFTER CREATING CONFIGS/Expo.conf
+
+How to run: Do these steps in order.
+Daemon---
+To launch the daemon, use frun.bat
+
+Wallet---
+After you sync to the blockchain, you can create your wallet using swal.bat and following the prompts in Simplewallet.
+
+Miner---
+Create a batch file with the following and paste in the address Simplewallet created, set the threads to whatever you want, and you should be good to go!
+ miner.exe --YourAddressHere --daemon-host 127.0.0.1 --daemon-rpc-port 23617 --threads 2 --log-level 3
