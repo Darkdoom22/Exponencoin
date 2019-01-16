@@ -55,8 +55,13 @@ UPGRADE_HEIGHT_V3=30
 AFTER CREATING CONFIGS/Expo.conf
 Create your .bats
 frun.bat - forknoted.exe  --config-file configs/expo.conf --log-level 3 --p2p-bind-port=23616 --rpc-bind-port 23617
+
+
 swal.bat - simplewallet.exe --config-file configs/expo.conf 
+
+
 mine.bat - miner.exe --address YourAddressHere --daemon-host 127.0.0.1 --daemon-rpc-port 23617 --threads x
+
 
 
 How to run: Do these steps in order.
