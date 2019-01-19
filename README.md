@@ -10,11 +10,14 @@ Forknote is innovative way to create Cryptonote (https://cryptonote.org) based c
 Step by step Windows instructions:
 https://github.com/forknote/cryptonote-generator/blob/master/docs/windows-requirements-install.md
 
-Ubuntu (tested on Ubuntu 14.04) / Mac dependencies install script:
-https://github.com/forknote/cryptonote-generator/blob/master/configure.sh
+Ubuntu: Install GCC/G++ 5.6 (confirmed ok)
+Install cmake
+Install and compile Boost 
+git clone http://github.com/Darkdoom22/Exponencoin Exponencoin
+cd Exponencoin
+sudo make -j 4
 
-
-
+May have to experiment a little with dependencies, it can be tricky to get the right ones to compile this.
 
 Config File for Exponencoin
 Create a Configs folder where your binaries are, and place this in a file named Expo.conf
